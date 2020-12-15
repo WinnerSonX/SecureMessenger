@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/new_conversation_fragment_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCBCBCBC"
+        android:elevation="9dp"
+        android:clickable="true"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/close_conversation_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_above="@id/open_conversation_relative_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ripple_white"
+            android:padding="5dp"
+            android:src="@drawable/ic_close" />
+
+        <RelativeLayout
+            android:id="@+id/open_conversation_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_corners"
+            android:elevation="16dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/open_conversation_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:drawablePadding="10dp"
+                android:gravity="center|start"
+                android:text="Новый чат"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                app:drawableStartCompat="@drawable/ic_chat" />
+
+
+
+                <RelativeLayout
+                    android:id="@+id/open_aes_conversation_layout"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/ripple"
+                    android:clickable="true"
+                    android:layout_below="@id/open_conversation_title"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/open_aes_conversation_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@android:color/transparent"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_aes" />
+
+                    <TextView
+                        android:id="@+id/open_aes_conversation_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_toEndOf="@id/open_aes_conversation_icon"
+                        android:text="Симметричное шифрование"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/open_aes_conversation_description"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/open_aes_conversation_title"
+                        android:layout_alignStart="@id/open_aes_conversation_title"
+
+                        android:text="Обменяйтесь ключами при личной встрече"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

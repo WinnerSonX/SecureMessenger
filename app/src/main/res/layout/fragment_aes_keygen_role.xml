@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+
+        android:id="@+id/aes_keygen_role_fragment_root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCBCBCBC"
+        android:clickable="true"
+        android:elevation="9dp"
+        android:focusable="true">
+
+        <ImageButton
+            android:id="@+id/close_aes_keygen_role_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_above="@id/aes_keygen_role_relative_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/ripple_white"
+            android:padding="5dp"
+            android:src="@drawable/ic_close" />
+        <ImageButton
+            android:id="@+id/go_back_to_new_conversation"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_above="@id/aes_keygen_role_relative_layout"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ripple_white"
+            android:padding="5dp"
+            android:src="@drawable/ic_back" />
+
+        <LinearLayout
+            android:id="@+id/aes_keygen_role_relative_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_corners"
+            android:elevation="16dp"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <RelativeLayout
+                android:id="@+id/show_key_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/show_key_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_show_qr" />
+
+                <TextView
+                    android:id="@+id/show_key_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/show_key_icon"
+                    android:text="Я покажу ключ собеседнику"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/show_key_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/show_key_title"
+                    android:layout_alignStart="@id/show_key_title"
+                    android:text="Ключ будет создан на этом устройстве"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/scan_key_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/ripple"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/scan_key_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:background="@android:color/transparent"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_scan_qr" />
+
+                <TextView
+                    android:id="@+id/scan_key_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/scan_key_icon"
+                    android:text="Я отсканирую ключ собеседника"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/scan_key_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/scan_key_title"
+                    android:layout_alignStart="@id/scan_key_title"
+
+                    android:text="Ключ будет получен с другого устройства"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

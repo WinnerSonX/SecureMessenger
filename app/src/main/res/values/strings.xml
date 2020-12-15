@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SecureMessenger</string>
+    <string name="new_user_title">Я новый пользователь</string>
+    <string name="existing_user_title">Ввести UUID пользователя</string>
+</resources>
